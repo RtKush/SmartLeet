@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="options.css">
+    <title>Extension options</title>
+</head>
+<body>
+    <h1>AI Summarizer Settings</h1>
+    <div class="form-group">
+        <label for="api-key">Gemini API key</label>
+        <input type="text" id="api-key" placeholder="Enter your Gemini API key">
+
+        <p>
+            You can get your API key from
+            <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a>
+        </p>
+    </div>
+
+    <button id="save-btn">Save settings</button>
+    <p id="success-msg" class="success-msg">
+        Settings saved successfully!
+    </p>
+
+    <script src="options.js"></script>
+</body>
+</html>

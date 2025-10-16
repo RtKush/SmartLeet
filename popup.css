@@ -1,0 +1,191 @@
+/* popup.css - Glass Studio theme */
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg,#0b1220 0%, #07103a 100%);
+  margin: 0;
+  padding: 16px;
+  min-width: 620px; /* relaxed to fit smaller screens */
+  min-height: 420px;
+  box-sizing: border-box;
+  color: #e6eef8;
+}
+
+.popup-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border-radius:12px}
+.popup-header.glass{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));backdrop-filter: blur(8px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.title-wrap h2{margin:0;font-size:18px;color:#e6eef8}
+.title-wrap .sub{margin:0;font-size:12px;color:#cbd5e1}
+.icon-btn{background:transparent;border:none;color:#e6eef8;padding:6px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* quick one-line bar */
+.quick-bar{display:flex;gap:14px;align-items:center;justify-content:center;margin:10px 0;padding:8px 6px}
+.quick-btn{
+  padding:12px 26px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color:#e6eef8;
+  cursor:pointer;
+  font-weight:700;
+  font-size:15px;
+  min-width:110px;
+  text-align:center;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.4);
+}
+.quick-btn:hover{background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));transform:translateY(-2px)}
+.quick-btn.active{background:linear-gradient(90deg,#06b6d4,#6366f1);color:#021224;box-shadow:0 12px 30px rgba(6,22,45,0.45);}
+
+button {
+  display: inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 8px 12px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#06b6d4 0%,#6366f1 100%);
+  color: #061124;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s cubic-bezier(.2,.9,.2,1), box-shadow 0.12s ease, opacity 0.12s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(6,22,45,0.45);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+select {
+  flex: 1;
+  padding: 8px 12px;
+  margin: 6px 10px;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.02);
+  color: #e6eef8;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+/* Controls */
+.controls{display:flex;align-items:flex-start;gap:12px;justify-content:space-between}
+.btns{flex:1;display:flex;gap:12px;flex-wrap:wrap}
+
+.select-wrap{min-width:160px}
+
+/* Background canvas removed — UI is modal-only now. */
+.sidebar{order:1}
+
+.output .placeholder{color:#94a3b8;margin:0}
+/* larger, centered placeholder for empty canvas */
+.output .muted{font-size:48px;line-height:1.05;text-align:center;padding:56px 28px;border-radius:12px;color:#9fb3d6}
+
+.section{margin-bottom:14px;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.03)}
+.section h3{margin:0 0 8px 0;font-size:15px;color:#e6eef8;display:flex;align-items:center;justify-content:space-between}
+.section p{margin:0 0 10px 0;color:#cbd5e1;line-height:1.5}
+
+.section .controls-small{display:flex;gap:8px;align-items:center}
+.section .collapse-toggle{background:transparent;border:1px solid rgba(255,255,255,0.04);color:#cbd5e1;padding:6px;border-radius:8px;cursor:pointer}
+
+.fade-in{animation:fadeInUp .28s ease both}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* code block */
+.code{display:block;padding:16px;border-radius:10px;background:#07103a;color:#dbeafe;overflow:auto;font-family:Consolas, 'Courier New', monospace;font-size:14px}
+.code pre{margin:0;white-space:pre-wrap}
+
+/* copy button for code blocks */
+.code-wrap{position:relative}
+.copy-btn{position:absolute;right:8px;top:8px;background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border:none;color:#e6eef8;padding:6px 8px;border-radius:6px;cursor:pointer;font-size:12px}
+.copy-btn:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px)}
+
+/* color scheme for sections */
+.section h3{display:flex;align-items:center;gap:8px}
+.section h3::before{content:'';width:10px;height:10px;border-radius:2px;background:linear-gradient(180deg,#60a5fa,#3b82f6);display:inline-block}
+
+/* primary button style */
+.btns .primary{background:linear-gradient(90deg,#06b6d4,#3b82f6);box-shadow:0 6px 18px rgba(59,130,246,0.12)}
+
+/* small helpers */
+.muted{color:#94a3b8;font-size:13px}
+
+/* canvas layout */
+.canvas{display:flex;gap:16px;margin-top:14px}
+.sidebar{width:132px;background:rgba(255,255,255,0.012);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+/* hide the left sidebar entirely */
+.sidebar{display:none !important}
+.sidebar .mini-controls{display:flex;gap:8px;margin-bottom:12px}
+.sidebar .mini-controls button{flex:1;padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:#cbd5e1}
+.sections-list{display:flex;flex-direction:column;gap:12px}
+.sections-list .side-action{display:block;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));color:#e6eef8;border:1px solid rgba(255,255,255,0.02);text-align:left}
+.sections-list .side-action:hover{background:rgba(255,255,255,0.03);box-shadow:none;transform:translateY(-2px)}
+
+/* active (selected) sidebar button */
+.sections-list .side-action.active{background:linear-gradient(90deg,#08b6c6,#6366f1);color:#021224;box-shadow:0 10px 26px rgba(6,22,45,0.46);transform:none}
+
+/* pulse to highlight expanded section briefly */
+.section.pulse{animation:pulseIn .9s ease both}
+@keyframes pulseIn{0%{box-shadow:0 0 0 rgba(99,102,241,0)}30%{box-shadow:0 8px 30px rgba(99,102,241,0.12)}100%{box-shadow:0 0 0 rgba(99,102,241,0)}}
+
+/* make the output text larger and more legible */
+.output.big{font-size:16px;line-height:1.7;padding:28px}
+.section p{font-size:15px}
+.kbd-help{font-size:12px;margin-top:12px}
+
+/* big output tweaks */
+.output.big{flex:1;min-height:520px}
+
+/* modal popup centered on screen */
+.modal-backdrop{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(2,6,23,0.6);display:none;align-items:center;justify-content:center;z-index:999}
+.modal{width:760px;max-width:95vw;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;padding:18px;box-shadow:0 28px 68px rgba(2,6,23,0.68);transform:translateY(-16px);opacity:0;transition:all 220ms ease}
+.modal.show{transform:none;opacity:1}
+.modal .controls{display:flex;justify-content:flex-end;gap:8px}
+.modal .modal-body{display:flex;gap:zzzz14px}
+/* allow modal content to scroll when it grows tall */
+.modal{max-height:90vh;overflow:visible}
+.modal .modal-body{max-height:68vh;overflow:auto;-webkit-overflow-scrolling:touch;padding-right:6px}
+.modal .modal-body .content{overflow:auto}
+.modal-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 6px;margin-bottom:8px}
+.modal-header-actions{display:flex;gap:8px}
+.modal-header-select{margin-left:12px;display:inline-flex;align-items:center}
+.modal-header-select select{background:linear-gradient(90deg,#17c1be,#6f5af8);border:none;color:#021224;padding:6px 10px;border-radius:8px;font-weight:700;cursor:pointer}
+.modal-header-actions button{padding:8px 12px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.modal-header-actions .copy-code{background:linear-gradient(90deg,#06b6d4,#3b82f6);color:#021224}
+.modal-header-actions .download-code{background:linear-gradient(90deg,#7c3aed,#6366f1);color:#fff}
+.modal-header-actions .close-modal{background:transparent;border:1px solid rgba(255,255,255,0.04);color:#cbd5e1}
+.modal .modal-body .content{flex:1}
+.modal .modal-body .actions{width:220px}
+.modal .modal-actions button{padding:8px 12px;border-radius:8px}
+.modal .copy-code{background:#0ea5b7;color:#021224;border:none}
+.modal .download-code{background:#6366f1;color:#fff;border:none}
+.modal .close-modal{background:transparent;border:1px solid rgba(255,255,255,0.04);color:#cbd5e1}
+
+/* draggable header */
+.modal-header{cursor:grab;padding:8px 10px;border-radius:8px;background:transparent;color:#e6eef8;margin-bottom:8px}
+.modal-header:active{cursor:grabbing}
+
+/* run button for code blocks */
+.run-btn{display:inline-block;margin-left:8px;padding:6px 8px;border-radius:6px;background:#fff;color:#07103a;border:none;cursor:pointer}
+
+/* toast */
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:28px;background:#081226;color:#dbeafe;padding:8px 14px;border-radius:8px;box-shadow:0 8px 30px rgba(2,6,23,0.6);display:none;z-index:1200}
+.toast.show{display:block;animation:toastIn .32s ease}
+@keyframes toastIn{from{transform:translateX(-50%) translateY(8px);opacity:0}to{transform:translateX(-50%) translateY(0);opacity:1}}
+
+@media (max-width:640px){
+  body{min-width:320px;padding:12px}
+  button{width:100%}
+  .controls{flex-direction:column}
+}

@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "SmartLeet",
+    "version": "1.0",
+    "description": "Get hints, approaches, brute force, and optimized solutions for LeetCode problems using Gemini AI.",
+    "permissions": ["scripting", "activeTab", "storage", "webNavigation"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "image.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://leetcode.com/problems/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "options_page": "options.html",
+    "host_permissions": ["https://leetcode.com/*"]
+}
